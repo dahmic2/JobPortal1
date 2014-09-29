@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>JOB Portal</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<div class="meta">
+  <div class="metalinks">
+    <a href="http://localhost:3000/home/index"><%= image_tag("meta1.gif")%></a>
+    <a href="http://localhost:3000/home/search"><%= image_tag("meta2.gif")%></a>
+    <a href="#"><%= image_tag("meta3.gif")%></a>
+    <a href="#"><%= image_tag("meta4.gif")%></a>
+  </div>
+
+</div>
+
+<div >
+  <a href="http://localhost:3000/home/index" class="logo"><%= image_tag("logo.jpg")%></a>
+  <span class="slogan">Your Key to Success</span>
+  <ul id="menu">
+    <li><a href="http://localhost:3000/home/index">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="http://localhost:3000/home/search">Browese</a></li>
+    <li><a href="#">Login</a></li>
+    <li><%= link_to "Sign up", new_user_path, "data-no-turbolink" => true %></li>
+    <li><a href="#">Help</a></li>
+  </ul>
+</div>
+<div id="content">
+  <div id="info" >
+    <h1 style="text-align:center ; color:black"> Lista oglasa </h1>
+    <br>
+    <div style="width:180px; background-color:#B0B0B0">
+      <br><br>
+      <b style="font-size: 16px; margin-left: 10px">Job Type </b>
+      <br><br>
+      <form action="" style="font-size: 14px; margin-left: 15px">
+        <input type="checkbox" name="jobtype" value="FullTime">Full Time<br>
+        <input type="checkbox" name="jobtype" value="Contract">Contract <br>
+        <input type="checkbox" name="jobtype" value="PartTime">Part Time <br>
+        <input type="checkbox" name="jobtype" value="Internship">Internship <br>
+        <input type="checkbox" name="jobtype" value="Temp">Temp <br>
+        <input type="checkbox" name="jobtype" value="Other">Other
+
+      </form>
+      <br><hr><br><br>
+      <b style="font-size: 16px; margin-left: 10px">Location </b>
+      <br><br>
+      <form action="" style="font-size: 14px; margin-left: 15px">
+        <input type="checkbox" name="location" value="BanjaLuka">Banja Luka<br>
+        <input type="checkbox" name="location" value="Bihać">Bihać <br>
+        <input type="checkbox" name="location" value="Brčko">Brčko <br>
+        <input type="checkbox" name="location" value="Inostranstvo">Inostranstvo <br>
+        <input type="checkbox" name="location" value="Mostar">Mostar <br>
+        <input type="checkbox" name="location" value="Neum">Neum <br>
+        <input type="checkbox" name="location" value="Sarajevo">Sarajevo <br>
+        <input type="checkbox" name="location" value="Travnik">Travnik <br>
+        <input type="checkbox" name="location" value="Tuzla">Tuzla <br>
+        <input type="checkbox" name="location" value="Zenica">Zenica
+
+      </form>
+      <br><hr><br><br>
+      <b style="font-size: 16px; margin-left: 10px">Categories </b>
+      <br><br>
+      <form action="" style="font-size: 12px; margin-left: 15px">
+        <input type="checkbox" name="category" value="AdministrativneUsluge">Administrativne usluge<br>
+        <input type="checkbox" name="category" value="Bankarstvo">Bankarstvo <br>
+        <input type="checkbox" name="category" value="BiotehnologijaIFarmacija">Biotehnologija i farmacija <br>
+        <input type="checkbox" name="category" value="DržavnaSlužbaIUprava">Državna služba i uprava <br>
+        <input type="checkbox" name="category" value="EkonomijaIFinanasije">Ekonomija i finanasije <br>
+        <input type="checkbox" name="category" value="ElektrotehnikaIInformatika">Elektrotehnika i informatika <br>
+        <input type="checkbox" name="category" value="FrizeriIKozmetičari">Frizeri i kozmetičari <br>
+        <input type="checkbox" name="category" value="Geologija">Geologija <br>
+        <input type="checkbox" name="category" value="GrađevinarstvoIArhitektura">Građevinarstvo i arhitektura <br>
+        <input type="checkbox" name="category" value="KomercijalaIProdaja">Komercijala i prodaja <br>
+        <input type="checkbox" name="category" value="MarketingIPR">Marketing i PR<br>
+        <input type="checkbox" name="category" value="MašinstvoIMetalurgija">Mašinstvo i metalurgija <br>
+        <input type="checkbox" name="category" value="Mediji">Mediji <br>
+        <input type="checkbox" name="category" value="MenadžmentIUpravljanje">Menadžment i upravljanje <br>
+        <input type="checkbox" name="category" value="NaukaIIstraživačkiRad">Nauka i istraživački rad <br>
+        <input type="checkbox" name="category" value="ObrazovanjeKulturaISport">Obrazovanje, kultura i sport <br>
+        <input type="checkbox" name="category" value="Osiguranje">Osiguranje <br>
+        <input type="checkbox" name="category" value="Ostalo">Ostalo <br>
+        <input type="checkbox" name="category" value="PolicijaIZaštitarskeUsluge">Policija i zaštitarske usluge <br>
+        <input type="checkbox" name="category" value="PoljoprivredaIŠumarstvo">Poljoprivreda i šumarstvo <br>
+        <input type="checkbox" name="category" value="PravoIDruštveneNauke">Pravo i društvene nauke<br>
+        <input type="checkbox" name="category" value="PrehrambenaIndustrija">Prehrambena industrija <br>
+        <input type="checkbox" name="category" value="PrevodilačkeUsluge">Prevodilačke usluge <br>
+        <input type="checkbox" name="category" value="Proizvodnja">Proizvodnja <br>
+        <input type="checkbox" name="category" value="RačunovodstvoIRevizija">Računovodstvo i revizija <br>
+        <input type="checkbox" name="category" value="Stipendije">Stipendije <br>
+        <input type="checkbox" name="category" value="Tehnologija">Tehnologija <br>
+        <input type="checkbox" name="category" value="TeleprodajaITelemaketing">Teleprodaja i telemarketing <br>
+        <input type="checkbox" name="category" value="TransportISkladištenje">Transport i skladištenje <br>
+        <input type="checkbox" name="category" value="Trgovina">Trgovina <br>
+        <input type="checkbox" name="category" value="UgostiteljstvoITurizam">Ugostiteljstvo i turizam<br>
+        <input type="checkbox" name="category" value="UmjetnostIDizajn">Umjetnost i dizajn <br>
+        <input type="checkbox" name="category" value="ZanatskeUsluge">Zanatske usluge <br>
+        <input type="checkbox" name="category" value="Zdravstvo i medicina">Zdravstvo i medicina
+
+      </form>
+      <br><hr><br><br>
+      <a href="#" style="padding-left: 5px"><%= image_tag("search.jpg")%></a>
+      <br><br><br>
+    </div>
+    <div style="width: 670px">
+      <div style="width:655px;border: 3px solid white">
+        <a href="#"> <h2 style="color:blue; margin-top: 8px; margin-left: 10px"> Programer M/Z </h2> </a><br>
+        Potreban programer sa iskustvom u Java programskom jeziku . . . <br>
+        Lokacija: Sarajevo <br>
+        <a href="#" class="button" style="margin-left:15px; margin-bottom: 4px">Read more</a></h2>
+
+      </div>
+      <div style="width:655px;border: 3px solid white">
+        <a href="#"> <h2 style="color:blue; margin-top: 8px; margin-left: 10px"> Programer M/Z </h2> </a><br>
+        Potreban programer sa iskustvom u Java programskom jeziku . . . <br>
+        Lokacija: Sarajevo <br>
+        <a href="#" class="button" style="margin-left:15px; margin-bottom: 4px">Read more</a></h2>
+
+      </div>
+      <div style="width:655px;border: 3px solid white">
+        <a href="#"> <h2 style="color:blue; margin-top: 8px; margin-left: 10px"> Programer M/Z </h2> </a><br>
+        Potreban programer sa iskustvom u Java programskom jeziku . . . <br>
+        Lokacija: Sarajevo <br>
+        <a href="#" class="button" style="margin-left:15px; margin-bottom: 4px">Read more</a></h2>
+
+      </div>
+      <div style="width:655px;border: 3px solid white">
+        <a href="#"> <h2 style="color:blue; margin-top: 8px; margin-left: 10px"> Programer M/Z </h2> </a><br>
+        Potreban programer sa iskustvom u Java programskom jeziku . . . <br>
+        Lokacija: Sarajevo <br>
+        <a href="#" class="button" style="margin-left:15px; margin-bottom: 4px">Read more</a></h2>
+
+      </div>
+      <div style="width:655px;border: 3px solid white">
+        <a href="#"> <h2 style="color:blue; margin-top: 8px; margin-left: 10px"> Programer M/Z </h2> </a><br>
+        Potreban programer sa iskustvom u Java programskom jeziku . . . <br>
+        Lokacija: Sarajevo <br>
+        <a href="#" class="button" style="margin-left:15px; margin-bottom: 4px">Read more</a></h2>
+
+      </div>
+      <div style="width:655px;border: 3px solid white">
+        <a href="#"> <h2 style="color:blue; margin-top: 8px; margin-left: 10px"> Programer M/Z </h2> </a><br>
+        Potreban programer sa iskustvom u Java programskom jeziku . . . <br>
+        Lokacija: Sarajevo <br>
+        <a href="#" class="button" style="margin-left:15px; margin-bottom: 4px">Read more</a></h2>
+
+      </div>
+      <div style="width:655px;border: 3px solid white">
+        <a href="#"> <h2 style="color:blue; margin-top: 8px; margin-left: 10px"> Programer M/Z </h2> </a><br>
+        Potreban programer sa iskustvom u Java programskom jeziku . . . <br>
+        Lokacija: Sarajevo <br>
+        <a href="#" class="button" style="margin-left:15px; margin-bottom: 4px">Read more</a></h2>
+
+      </div>
+      <div style="width:655px;border: 3px solid white">
+        <a href="#"> <h2 style="color:blue; margin-top: 8px; margin-left: 10px"> Programer M/Z </h2> </a><br>
+        Potreban programer sa iskustvom u Java programskom jeziku . . . <br>
+        Lokacija: Sarajevo <br>
+        <a href="#" class="button" style="margin-left:15px; margin-bottom: 4px">Read more</a></h2>
+
+      </div>
+      <div style="width:655px;border: 3px solid white">
+        <a href="#"> <h2 style="color:blue; margin-top: 8px; margin-left: 10px"> Programer M/Z </h2> </a><br>
+        Potreban programer sa iskustvom u Java programskom jeziku . . . <br>
+        Lokacija: Sarajevo <br>
+        <a href="#" class="button" style="margin-left:15px; margin-bottom: 4px">Read more</a></h2>
+
+      </div>
+      <div style="width:655px;border: 3px solid white">
+        <a href="#"> <h2 style="color:blue; margin-top: 8px; margin-left: 10px"> Programer M/Z </h2> </a><br>
+        Potreban programer sa iskustvom u Java programskom jeziku . . . <br>
+        Lokacija: Sarajevo <br>
+        <a href="#" class="button" style="margin-left:15px; margin-bottom: 4px">Read more</a></h2>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  Copyright &copy;. All rights reserved.
+</div>
+</body>
+</html>
