@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>JOB Portal</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<div class="meta">
+  <div class="metalinks">
+    <a href="http://localhost:3000/home/index"><%= image_tag("meta1.gif")%></a>
+    <a href="http://localhost:3000/home/search"><%= image_tag("meta2.gif")%></a>
+    <a href="#"><%= image_tag("meta3.gif")%></a>
+    <a href="#"><%= image_tag("meta4.gif")%></a>
+  </div>
+
+</div>
+
+<div id="header">
+  <a href="http://localhost:3000/home/index" class="logo"><%= image_tag("logo.jpg")%></a>
+  <span class="slogan">Your Key to Success</span>
+  <ul id="menu">
+    <li><a href="http://localhost:3000/home/index">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="http://localhost:3000/home/search">Browese</a></li>
+    <li><a href="#">Login</a></li>
+    <li><%= link_to "Sign up", new_user_path, "data-no-turbolink" => true %></li>
+    <li><a href="#">Help</a></li>
+  </ul>
+  <%= image_tag("bigpicture.jpg")%>
+</div>
+<div id="content">
+  <div class="search">
+    <form action="#">
+      <%= image_tag("title.gif")%>
+      <input type="text" class="first input" value="Enter keywords" />
+      <a href="#" class="button">Search</a>
+      <div class="line">
+        <input type="checkbox" class="check" /> <span class="exept">Search Title Only</span>
+        <div class="links">
+          | <a href="http://localhost:3000/home/search">More Search Options</a>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div id="blocks">
+    <div class="block">
+      <h2 style="color:white ; text-align:center"> Mapa poslova</h2>
+      <br><br>
+      <%= image_tag("map.jpg")%><br><br>
+      <a href="#" class="more"><%= image_tag("morey.jpg")%></a>
+    </div>
+    <div class="block">
+      <h2 style="color:white ; text-align:center"> Advartisements </h2>
+      <p class="red_text">Pronađite posao sa nama. Nudimo veliki izbor poslova za svakoga. Poslovi za svakoga, iz svih kategorija, sa svih lokacija iz cijelog svijeta. Vaše je samo da se registrujete, izaberete posao za sebe, prijavite se i počnete sa radom.</p>
+      <br><a href="#" class="more"><%= image_tag("morer.jpg")%></a>
+    </div>
+    <div class="block">
+      <h2 style="color:white ; text-align:center"> Sign Up as User </h2> <br />
+      <p class="gray_text">Registrujte se kao posloprimac. Registracija Vam omogućava mnoge pogodnosti (dobijanje besplatnih obavjesti porukama i emailovima, prijavljivanje na oglase, kreiranje CV-eva i mnoge druge pogodnosti).</p>
+      <div style="padding-left:130px"> <%=link_to image_tag("submit.jpg", :border => 0, :alt => '', :title => ''), new_user_path, "data-no-turbolink" => true %> </div>
+    </div>
+    <div class="block">
+      <h2 style="color:white ; text-align:center"> Sign Up as Employer </h2> <br />
+      <p class="gray_text">Registrujte se kao poslodavac. Registracija Vam omogućava mnoge pogodnosti (dobijanje besplatnih obavjesti porukama i emailovima, dodavanje oglasa, pregled CV-eva registrovanih i mnoge druge pogodnosti).</p>
+      <div style="padding-left:130px"><%=link_to image_tag("submit.jpg", :border => 0, :alt => '', :title => ''), new_user_path, "data-no-turbolink" => true %> </div>
+    </div>
+  </div>
+  <div id="info" >
+    <h1 style="text-align:center ; color:black"> Posljednji oglasi </h1>
+    <br>
+    <div style="width:705px; margin-left:45px;border: 3px solid white">
+      <a href="#"> <h2 style="color:blue"> Programer M/Z </h2> </a><br>
+      Potreban programer sa iskustvom u Java programskom jeziku . . . <br>
+      Lokacija: Sarajevo <br>
+      <a href="#" class="button" style="margin-left:635px">Read more</a></h2>
+
+    </div>
+  </div>
+</div>
+<div id="footer">
+  Copyright &copy;. All rights reserved.
+</div>
+</body>
+</html>
