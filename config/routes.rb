@@ -1,8 +1,14 @@
 JobPortal::Application.routes.draw do
+  resources :sessions
+
+  resources :employers
+
   resources :users
 
   get "home/index"
   get "home/search"
+  get "sessions/new"
+  get "home/forgot_password"
   
   root 'home#index'
 
