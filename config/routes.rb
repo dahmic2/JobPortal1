@@ -1,4 +1,6 @@
 JobPortal::Application.routes.draw do
+  resources :advertisments
+
   resources :sessions
 
   resources :employers

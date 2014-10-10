@@ -1,5 +1,49 @@
-<h1>New user</h1>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>JOB Portal</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 
-<%= render 'form' %>
+<body>
+<div class="meta">
+  <div class="metalinks">
+    <a href="http://localhost:3000/home/index"><%= image_tag("meta1.gif")%></a>
+    <a href="http://localhost:3000/home/search"><%= image_tag("meta2.gif")%></a>
+    <a href="#"><%= image_tag("meta3.gif")%></a>
+    <a href="#"><%= image_tag("meta4.gif")%></a>
+  </div>
 
-<%= link_to 'Back', users_path %>
+</div>
+
+<div id="header">
+  <a href="http://localhost:3000/home/index"  class="logo"><%= image_tag("logo.jpg")%></a></a>
+  <span class="slogan">Your Key to Success</span>
+  <ul id="menu">
+    <li><a href="http://localhost:3000/home/index">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="http://localhost:3000/home/search">Browese</a></li>
+    <li><a href="#">Login</a></li>
+    <li><a href="#">Sing Up</a></li>
+    <li><a href="#">Help</a></li>
+  </ul>
+  <%= image_tag("bigpicture.jpg")%>
+</div>
+<div id="content">
+
+  <div id="info" >
+    <h1 style="text-align:center ; color:black"> Registracija </h1>
+    <br>
+    <%= render 'form' %>
+
+
+
+  </div>
+</div>
+<div id="footer">
+  Copyright &copy;. All rights reserved.
+</div>
+</body>
+</html>

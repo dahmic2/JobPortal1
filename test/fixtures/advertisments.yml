@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  expire: 2014-10-01
+  job_type: MyString
+  number_of_positions: 1
+  reciving_email: MyString
+  category: MyString
+  location: MyString
+  employer_id: 1
+
+two:
+  title: MyString
+  description: MyString
+  expire: 2014-10-01
+  job_type: MyString
+  number_of_positions: 1
+  reciving_email: MyString
+  category: MyString
+  location: MyString
+  employer_id: 1

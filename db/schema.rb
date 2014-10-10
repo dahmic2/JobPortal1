@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140929130639) do
+ActiveRecord::Schema.define(version: 20141001000009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "advertisments", force: true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.date     "expire"
+    t.string   "job_type"
+    t.integer  "number_of_positions"
+    t.string   "reciving_email"
+    t.string   "category"
+    t.string   "location"
+    t.integer  "employer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "employers", force: true do |t|
     t.string   "contact_name"

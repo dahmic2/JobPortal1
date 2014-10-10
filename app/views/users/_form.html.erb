@@ -1,69 +1,75 @@
 <%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="form_wrapper1" style="">
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+      </div>
+      <div class="field">
+        <%= f.label :lastname %><br>
+        <%= f.text_field :lastname %>
+      </div>
+      <div class="field">
+        <%= f.label :date_of_birth %><br>
+        <%= f.date_select :date_of_birth, start_year:1934, end_year:2000, order: [:day, :month, :year]  %>
+      </div>
+      <div class="field">
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :password %><br>
+        <%= f.text_field :password, :class => "form-control"%>
+      </div>
+      </div>
+      <div class="nova" style="display: inline-block; padding-left: 50px; font-size: 16px; padding-top: 13px">
+        <br>
+        <%= f.label :spol %><br> <br>
+        <%= f.radio_button :spol, "Male" %> <%= f.label :spol, "Male", :value => "Male"  %>
+        <%= f.radio_button :spol, "Female", :checked => "Female" %> <%= f.label :spol, "Female", :value => "Female" %>
+      </div>
+     <div class="form_wrapper1">
+       <br>
+      <div class="field">
+        <%= f.label :location %><br>
+        <%= f.select :location, options_for_select(@countries = ["Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua And Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan",
+                                                                 "Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei","Bulgaria","Burkina Faso",
+                                                                 "Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central African Republic","Chad","Chile","China", "Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo","Congo, Democratic Republic Of","Cook Islands",
+                                                                 "Costa Rica","Cote de Ivoire","Croatia","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","East Timor","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Fiji",
+                                                                 "Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guinea","Guinea-Bissau","Guyana",
+                                                                 "Haiti","Heard And Mc Donald Islands","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribat","Korea (Republic Of)","Kuwait","Kyrgyzstan","Laos",
+                                                                 "Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia, The F.Y.R. Of","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte",
+                                                                 "Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island",
+                                                                 "Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russian Federation","Rwanda","S Georgia, S Sandwich Islands",
+                                                                 "Saint Kitts And Nevis","Saint Lucia","Saint Vincent, The Grenadines","Samoa","San Marino","Sao Tome And Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa",
+                                                                 "Spain","Sri Lanka","St. Helena","St. Pierre And Miquelon","Suriname","Svalbard And Jan Mayen Islands","Swaziland","Sweden","Switzerland","Taiwan","Tajikistan","Tanzania","Thailand","Togo","Tokelau","Tonga","Trinidad And Tobago","Tunisia","Turkey","Turkmenistan",
+                                                                 "Turks And Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Vatican City State","Venezuela","Vietnam","Virgin Islands (British)","Virgin Islands (U.S.)",
+                                                                 "Wallis And Futuna Islands","Western Sahara","Yemen","Zambia","Zimbabwe"],selected ="Bosnia and Herzegovina") %>
+      </div>
+      <div class="field">
+        <%= f.label :address %><br>
+        <%= f.text_field :address %>
+      </div>
+
+      <div class="field">
+        <%= f.label :phone %><br>
+        <%= f.text_field :phone %>
+      </div>
+
+
+      <div class="actions" style="padding-left: 200px">
+        <br><br><br><br>
+        <%= f.submit %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :lastname %><br>
-    <%= f.text_field :lastname %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.select :location, options_for_select(@countries = ["Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua And Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan",
-                                                             "Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Bouvet Island","Brazil","British Indian Ocean Territory","Brunei","Bulgaria","Burkina Faso",
-                                                             "Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central African Republic","Chad","Chile","China", "Christmas Island","Cocos (Keeling) Islands","Colombia","Comoros","Congo","Congo, Democratic Republic Of","Cook Islands",
-                                                             "Costa Rica","Cote de Ivoire","Croatia","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","East Timor","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Fiji",
-                                                             "Finland","France","French Guiana","French Polynesia","French Southern Territories","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guinea","Guinea-Bissau","Guyana",
-                                                             "Haiti","Heard And Mc Donald Islands","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribat","Korea (Republic Of)","Kuwait","Kyrgyzstan","Laos",
-                                                             "Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia, The F.Y.R. Of","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte",
-                                                             "Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island",
-                                                             "Northern Mariana Islands","Norway","Oman","Pakistan","Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russian Federation","Rwanda","S Georgia, S Sandwich Islands",
-                                                             "Saint Kitts And Nevis","Saint Lucia","Saint Vincent, The Grenadines","Samoa","San Marino","Sao Tome And Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa",
-                                                             "Spain","Sri Lanka","St. Helena","St. Pierre And Miquelon","Suriname","Svalbard And Jan Mayen Islands","Swaziland","Sweden","Switzerland","Taiwan","Tajikistan","Tanzania","Thailand","Togo","Tokelau","Tonga","Trinidad And Tobago","Tunisia","Turkey","Turkmenistan",
-                                                             "Turks And Caicos Islands","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Vatican City State","Venezuela","Vietnam","Virgin Islands (British)","Virgin Islands (U.S.)",
-                                                             "Wallis And Futuna Islands","Western Sahara","Yemen","Zambia","Zimbabwe"],selected ="Bosnia and Herzegovina") %>
-  </div>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :spol %><br>
-    <%= f.label :spol, "Male", :value => "Male"  %>
-    <%= f.radio_button :spol, "Male" %>
-    <%= f.label :spol, "Female", :value => "Female" %>
-    <%= f.radio_button :spol, 0, :checked => "Female" %>
-  </div>
-  <div class="field">
-    <%= f.label :date_of_birth %><br>
-    <%= f.date_select :date_of_birth, start_year:1934, end_year:2000, order: [:day, :month, :year]  %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

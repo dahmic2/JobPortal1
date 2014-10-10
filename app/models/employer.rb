@@ -1,5 +1,7 @@
 class Employer < ActiveRecord::Base
 
+  has_many :advertisments
+
   def self.authenticate(email, password)
     employer = find_by_email(email)
     if employer && employer.password == password
